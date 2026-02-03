@@ -1,0 +1,35 @@
+// Tutorial 3: Chain Reaction
+// Zig-zag path with a box obstacle, player completes the path.
+(
+    name: "Tutorial 3: Around the Box",
+    goal_positions: [
+        (200.0, -250.0),
+    ],
+    fixed_objects: [
+        // Starting ball
+        Ball(
+            position: (-150.0, 250.0),
+        ),
+        // First platform (top-left, angled right)
+        Platform(
+            position: (-150.0, 150.0),
+            rotation: 0.25,
+            width: 120.0,
+        ),
+        // Box obstacle in the middle
+        Box(
+            position: (0.0, 0.0),
+            rotation: 0.0,
+        ),
+        // Third platform (bottom area, angled toward goal)
+        Platform(
+            position: (100.0, -150.0),
+            rotation: -0.15,
+            width: 120.0,
+        ),
+    ],
+    inventory: {
+        Platform: Some(2),
+        Box: Some(1),
+    },
+)
